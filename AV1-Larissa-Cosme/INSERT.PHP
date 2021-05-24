@@ -1,0 +1,1 @@
+"INSERT INTO `clientes`(`nome`, `cpf`, `endereco`, `cep`, `cidade`, `estado`) VALUES ('$nome','$cpf','$endereco', '$cep', '$cidade', '$estado')";
