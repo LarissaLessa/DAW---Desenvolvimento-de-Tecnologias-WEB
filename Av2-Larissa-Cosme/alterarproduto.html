@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8"/>
+        <title>Alterar dos Produtos</title>
+        <link rel="stylesheet" type="text/css" href="./Css/Style.css" />
+        <script>
+        function alertContents(){
+                 if(httpRequest.readyState === 4 && httpRequest.status === 200){
+                     alert(httpRequest.responseText);
+                 }else{
+                     alert("Ocorreu um erro");
+                     }
+                 }
+        function alterar(){
+                var httpRequest;
+                     
+                     if(window.XMLHttpRequest){
+                        httpRequest = new XMLHttpRequest();
+                     }else if(window.ActiveXObject){
+                        httpRequest = new ActiveXObject("Microsoft.XMLHTTP");
+                     }   
+                        httpRequest.onreadystatechange = alertContents();
+                        httpRequest.open('GET', alterar.php);
+                        httpRequest.send();
+            }
+        </script>
+    </head>
+    <body>  
+        <h1 style="Text-align:center">Alterar do Produtos</h1>
+        <form method = "GET">
+        <label for="CodBarra">Codigo de barras:</label><br>
+        <input type="number" id="CodBarra"><br><br>
+        <button onclick="alterar()">Alterar</button><br>
+        </form>
+    </body>
+</htm>
